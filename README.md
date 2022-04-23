@@ -6,10 +6,10 @@
 *Flask , Flask-mysqldb , bootstrap 5.
 *puedes utilizar el editor de codigo de tu preferencia.
 
-comandos
-pip install flask
-pip install flask_bootstrap
-pip install flask-mysqldb
+#comandos#
+*pip install flask
+*pip install flask_bootstrap
+*pip install flask-mysqldb
 
 #introducion#
 
