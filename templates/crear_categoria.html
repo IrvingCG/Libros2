@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+{% block title%}
+ Insertar-Categoria
+ {{super() }}
+{% endblock%}
+
+{% block content %}
+
+
+<h1>Insertar Categoria:</h1>
+
+
+<form  action="" method="POST" class="row g-3 needs-validation" novalidate>
+    <div class="col-md-4 position-relative">
+      <label for="validationTooltip01" class="form-label">Categoria</label>
+      <input type="text" class="form-control" id="validationTooltip01" value=""  name="nombre_categoria" required>
+      <div class="valid-tooltip">
+        
+      </div>
+    </div>
+    <div class="col-md-4 position-relative">
+      <label for="validationTooltip02" class="form-label">Descripcion</label>
+      <input type="text" class="form-control" id="validationTooltip02" value=""  name="descripcion" required>
+      <div class="valid-tooltip">
+        
+      </div>
+    </div>
+    <div class="col-12">
+      <input class="btn btn-primary" type="submit" value="Guardar"> <a class="btn btn-danger" aria-current="page" href="/">Canclar</a>
+    </div>
+  </form>
+
+{% endblock %}

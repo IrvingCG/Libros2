@@ -1,0 +1,56 @@
+{% extends 'layout.html' %}
+{% block title%}
+ Insertar-Libro
+ {{super() }}
+{% endblock%}
+
+{% block content %}
+
+
+<h1>Insertar Libro:</h1>
+
+
+<form  action="" method="POST" class="row g-3 needs-validation" novalidate>
+    <div class="col-md-4 position-relative">
+      <label for="validationTooltip01" class="form-label">Nombre:</label>
+      <input type="text" class="form-control" id="validationTooltip01" value="{{libro.1}}"  name="nombre_libro" required>
+      <div class="valid-tooltip">
+        
+      </div>
+    </div>
+    <div class="col-md-4 position-relative">
+      <label for="validationTooltip02" class="form-label">Autor:</label>
+      <input type="text" class="form-control" id="validationTooltip02" value="{{libro.2}}"  name="autor" required>
+      <div class="valid-tooltip">
+        
+      </div>
+    </div>
+    <div class="col-md-4 position-relative">
+      <label for="validationTooltipUsername" class="form-label">Categoria:</label>
+      <div class="input-group has-validation">
+        <input type="text" class="form-control" id="validationTooltipUsername" value = "{{libro.3}}"aria-describedby="validationTooltipUsernamePrepend"  name="categoria" required>
+        <div class="invalid-tooltip">
+          
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 position-relative">
+      <label for="validationTooltip03" class="form-label">Fecha:</label>
+      <input type="date" class="form-control" id="validationTooltip03" value = "{{libro.4}}" name="fecha" required>
+      <div class="invalid-tooltip">
+        Please provide a valid city.
+      </div>
+    </div>
+    <div class="col-md-4 position-relative">
+      <label for="validationTooltip02" class="form-label">Estatus:</label>
+      <input type="text" class="form-control" id="validationTooltip02" value = "{{libro.5}}"  name="status" required>
+      <div class="valid-tooltip">
+        
+      </div>
+    </div>
+    <div class="col-12">
+      <input class="btn btn-primary" type="submit" value="Actualizar"> <a class="btn btn-danger" aria-current="page" href="/">CANSELAR</a>
+    </div>
+  </form>
+
+{% endblock %}

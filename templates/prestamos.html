@@ -1,0 +1,47 @@
+{% extends 'layout.html' %}
+{% block title%}
+ Lista-Categorias
+ {{super() }}
+{% endblock%}
+
+{% block content %}
+
+{% with messages = get_flashed_messages() %}
+{% if messages%}
+{% for message in messages%}
+<div class="alert alert-success" role="alert">
+    {{message}}
+  </div>
+{%endfor%}
+{% endif %}
+{% endwith %}
+
+<center>
+  <h1>Lista de prestamos:</h1>
+<div class="col-md-7">
+  <table class="table table-dark table-striped">
+  <thead>
+  <tr>
+  <td>Id Usuario</td>
+  <td>Status</td>
+  <td>Accion</td>
+  </tr>
+  </thead>
+  <tbody>
+    {% for categoria in categorias%}
+  <tr>
+  <td>{{categoria.0}}</td> 
+  <td>{{categoria.1}}</td> 
+  <td>{{categoria.2}}</td>
+  
+  <td>
+  <a href="" class="btn btn-secondary">Editar</a>
+  <a href="" class="btn btn-danger btn-delete">Eliminar</a>
+  </td>
+  </tr>
+  {%endfor%}
+  </tbody>
+  </table>
+  </div>
+  </center>
+  {% endblock %}
